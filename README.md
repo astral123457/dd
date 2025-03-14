@@ -1,4 +1,4 @@
-# dd na verdade e o comando /black para voltar quando morreu ao ponto de origem 
+# DD na verdade e o comando /black para voltar quando morreu ao ponto de origem 
 
 Cuidado, o assassino sempre volta ao local do crime: o Mob Zumbi dos Palmares.
 
