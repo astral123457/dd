@@ -54,8 +54,8 @@ public final class Dd extends JavaPlugin implements Listener {
 
                     // Teletransporta o jogador para a localização de morte
                     player.teleport(deathLocation);
-                    player.sendMessage("Você foi teletransportado para o local onde morreu.");
-                    player.sendMessage("Cuidado, o assassino sempre volta ao local do crime: o Mob Zumbi dos Palmares.");
+                    player.sendMessage("§4 Você foi teletransportado para o local onde sofreu §f⛏§4 ate a morte.");
+                    player.sendMessage("§b Cuidado, o assassino sempre volta ao local do crime: o Mob §aZumbi dos Palmares§8. §f☠");
                 } else {
                     player.sendMessage("Nenhuma localização de morte registrada.");
                 }
