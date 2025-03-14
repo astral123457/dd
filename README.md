@@ -10,3 +10,11 @@ Minicraft versao 1.21.4 pois exite varias mas esta esta atulizada
 
 ![image](https://github.com/user-attachments/assets/01cdbf5f-770c-4a8c-bae5-6e46ca1dd550)
 
+```mermaid
+graph TD;
+    Inicio-->Registros_de_mortes_e_cordenadas;
+    Inicio-->/black;
+    Registros_de_mortes_e_cordenadas-->Fim;
+    /black-->Fim;
+```
+
