@@ -81,9 +81,26 @@ public final class Dd extends JavaPlugin implements Listener {
         // Carregar mensagens
         MessageManager messageManager = new MessageManager();
 
+
+
         if (label.equalsIgnoreCase("black")) {
             if (sender instanceof Player player) {
                 UUID playerId = player.getUniqueId();
+
+                String language = player.getLocale().toLowerCase();
+                if (language.startsWith("pt")) {
+                    language = "br";
+                } else if (language.startsWith("en")) {
+                    language = "en";
+                } else if (language.startsWith("es")) {
+                    language = "es";
+                } else if (language.startsWith("fr")) {
+                    language = "fr";
+                } else if (language.startsWith("de")) {
+                    language = "de";
+                } else {
+                    language = "default"; // Idioma padrão caso não seja reconhecido
+                }
 
                 // Verifica se há uma localização de morte armazenada
                 if (deathLocations.containsKey(playerId)) {
@@ -93,13 +110,13 @@ public final class Dd extends JavaPlugin implements Listener {
                     player.teleport(deathLocation);
 
                     // Mensagens traduzidas ao ser teletransportado
-                    String teleportMessage = messageManager.getMessage("teleported", "br");
+                    String teleportMessage = messageManager.getMessage("teleported", language);
                     player.sendMessage(teleportMessage);
 
-                    String warningMessage = messageManager.getMessage("warning", "br");
+                    String warningMessage = messageManager.getMessage("warning", language);
                     player.sendMessage(warningMessage);
                 } else {
-                    String noDeathLocation = messageManager.getMessage("no_death", "br");
+                    String noDeathLocation = messageManager.getMessage("no_death", language);
                     player.sendMessage(noDeathLocation);
                 }
             } else {
