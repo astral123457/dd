@@ -158,35 +158,50 @@ public final class Dd extends JavaPlugin implements Listener {
             JsonObject messages = new JsonObject();
 
 
-// Mensagem de morte registrada
-            JsonObject deathRegisteredMessages = new JsonObject();
-            deathRegisteredMessages.addProperty("br", "Sua localização de morte foi registrada!");
-            deathRegisteredMessages.addProperty("en", "Your death location has been recorded!");
-            messages.add("death_registered", deathRegisteredMessages);
+        // Mensagem de morte registrada
+        JsonObject deathRegisteredMessages = new JsonObject();
+        deathRegisteredMessages.addProperty("br", "Sua localização de morte foi registrada!");
+        deathRegisteredMessages.addProperty("en", "Your death location has been recorded!");
+        deathRegisteredMessages.addProperty("es", "¡Se ha registrado tu ubicación de muerte!");
+        deathRegisteredMessages.addProperty("fr", "Votre emplacement de décès a été enregistré !");
+        deathRegisteredMessages.addProperty("de", "Ihr Sterbeort wurde registriert!");
+        messages.add("death_registered", deathRegisteredMessages);
 
-// Mensagem de teletransporte
-            JsonObject teleportedMessages = new JsonObject();
-            teleportedMessages.addProperty("br", "§4 Você foi teletransportado para o local onde sofreu §f⛏§4 até a morte.");
-            teleportedMessages.addProperty("en", "§4 You were teleported to the location where you died §f⛏§4.");
-            messages.add("teleported", teleportedMessages);
+        // Mensagem de teletransporte
+        JsonObject teleportedMessages = new JsonObject();
+        teleportedMessages.addProperty("br", "§4 Você foi teletransportado para o local onde sofreu §f⛏§4 até a morte.");
+        teleportedMessages.addProperty("en", "§4 You were teleported to the location where you died §f⛏§4.");
+        teleportedMessages.addProperty("es", "§4 Fuiste teletransportado al lugar donde moriste §f⛏§4.");
+        teleportedMessages.addProperty("fr", "§4 Vous avez été téléporté à l'endroit où vous êtes mort §f⛏§4.");
+        teleportedMessages.addProperty("de", "§4 Sie wurden an den Ort teleportiert, an dem Sie gestorben sind §f⛏§4.");
+        messages.add("teleported", teleportedMessages);
 
-// Mensagem de aviso
-            JsonObject warningMessages = new JsonObject();
-            warningMessages.addProperty("br", "§b Cuidado, o assassino sempre volta ao local do crime: o Mob §aZumbi dos Palmares§8. §f☠");
-            warningMessages.addProperty("en", "§b Be careful, the killer always returns to the crime scene: the Mob §aZombie of the Palmares§8. §f☠");
-            messages.add("warning", warningMessages);
+        // Mensagem de aviso
+        JsonObject warningMessages = new JsonObject();
+        warningMessages.addProperty("br", "§b Cuidado, o assassino sempre volta ao local do crime: o Mob §aZumbi dos Palmares§8. §f☠");
+        warningMessages.addProperty("en", "§b Be careful, the killer always returns to the crime scene: the Mob §aZombie of the Palmares§8. §f☠");
+        warningMessages.addProperty("es", "§b Ten cuidado, el asesino siempre regresa al lugar del crimen: el Mob §aZombie de los Palmares§8. §f☠");
+        warningMessages.addProperty("fr", "§b Attention, le tueur revient toujours sur les lieux du crime : le Mob §aZombie des Palmares§8. §f☠");
+        warningMessages.addProperty("de", "§b Vorsicht, der Mörder kehrt immer zum Tatort zurück: das Mob §aZombie der Palmares§8. §f☠");
+        messages.add("warning", warningMessages);
 
-// Nenhuma localização de morte
-            JsonObject noDeathMessages = new JsonObject();
-            noDeathMessages.addProperty("br", "Nenhuma localização de morte registrada.");
-            noDeathMessages.addProperty("en", "No death location recorded.");
-            messages.add("no_death", noDeathMessages);
+        // Nenhuma localização de morte
+        JsonObject noDeathMessages = new JsonObject();
+        noDeathMessages.addProperty("br", "Nenhuma localização de morte registrada.");
+        noDeathMessages.addProperty("en", "No death location recorded.");
+        noDeathMessages.addProperty("es", "No se registró ninguna ubicación de muerte.");
+        noDeathMessages.addProperty("fr", "Aucune localisation de décès enregistrée.");
+        noDeathMessages.addProperty("de", "Kein Sterbeort aufgezeichnet.");
+        messages.add("no_death", noDeathMessages);
 
-// Apenas jogadores
-            JsonObject onlyPlayersMessages = new JsonObject();
-            onlyPlayersMessages.addProperty("br", "Apenas jogadores podem usar este comando.");
-            onlyPlayersMessages.addProperty("en", "Only players can use this command.");
-            messages.add("only_players", onlyPlayersMessages);
+        // Apenas jogadores
+        JsonObject onlyPlayersMessages = new JsonObject();
+        onlyPlayersMessages.addProperty("br", "Apenas jogadores podem usar este comando.");
+        onlyPlayersMessages.addProperty("en", "Only players can use this command.");
+        onlyPlayersMessages.addProperty("es", "Solo los jugadores pueden usar este comando.");
+        onlyPlayersMessages.addProperty("fr", "Seuls les joueurs peuvent utiliser cette commande.");
+        onlyPlayersMessages.addProperty("de", "Nur Spieler können diesen Befehl verwenden.");
+        messages.add("only_players", onlyPlayersMessages);
 
             try (FileWriter writer = new FileWriter(messagesFile)) {
 
