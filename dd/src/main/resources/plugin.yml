@@ -1,9 +1,0 @@
-name: dd
-version: '1.0'
-main: org.exampleorg.example.pow4.Pow4.dd.Dd
-api-version: '1.21'
-description: Plugin que permite voltar ao local onde o jogador morreu.
-commands:
-  black:
-    description: Teletransporta o jogador para o local de sua última morte.
-    usage: /black
