@@ -11,7 +11,12 @@ Curiozidades os Zombies sempre fala Mauri Mauri Mauri e os Vilages E RA e RA o c
 e no nether (inferno) so tem porco porque je-ssus coloco os espiritos ruim la (JE.SUS derivado de SUS)... Jogo apocaliptico de filmes
 
 Minicraft versao 1.21.4 pois exite varias mas esta esta atulizada...
-# Languem Support BR, EN, ES, FR, DE
+# Languem Support
+
+BR, EN, ES, FR, DE
+RU, ZH, ZH-TW, JA
+KO, IT, NL, PL, SV,
+CS, HU, TR, AR, FI, DA
 
 # Plugin
 
