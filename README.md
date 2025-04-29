@@ -32,3 +32,6 @@ graph TD;
     /black-->Fim;
 ```
 
+![image](https://github.com/user-attachments/assets/9d200dd6-2463-49a3-b8b9-39fc96de58fe)
+
+
