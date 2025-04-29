@@ -1,0 +1,16 @@
+name: MeuPlugin
+version: 1.0
+main: back.MeuPlugin
+api-version: 1.19
+author: Amauri
+description: Plugin que permite voltar ao local onde o jogador morreu.
+commands:
+  black:
+    description: Teletransporta o jogador para o local de sua última morte.
+    usage: /black
+  back:
+    description: Teletransporta o jogador para o local de sua última morte.
+    usage: /back
+  clearDeaths:
+    description: Método para Limpar os Pontos de Morte.
+    usage: /clearDeaths
