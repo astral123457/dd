@@ -7,30 +7,24 @@
  */
 
 plugins {
-    // Apply the application plugin to add support for building a CLI application in Java.
-    //id 
     id 'java'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+    id 'maven-publish'
+
 }
 
 repositories {
-    // Use Maven Central for resolving dependencies.
     mavenCentral()
-    //maven { url 'https://papermc.io/repo/repository/maven-public/' }
     maven { url 'https://repo.papermc.io/repository/maven-public/' }
-    //maven { url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+
 }
 
 dependencies {
-    // Use JUnit Jupiter for testing.
     testImplementation 'org.junit.jupiter:junit-jupiter:5.9.1'
     compileOnly 'io.papermc.paper:paper-api:1.20-R0.1-SNAPSHOT'
-    //compileOnly 'org.spigotmc:spigot-api:1.20.5-R0.1-SNAPSHOT'
-
-    // This dependency is used by the application.
     implementation 'com.google.guava:guava:31.1-jre'
 }
 
-// Apply a specific Java toolchain to ease working on different environments.
 java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(17)
@@ -42,9 +36,13 @@ tasks.withType(JavaCompile) {
     options.compilerArgs << "-Xlint:deprecation"
 }
 
-tasks.named('jar') {
+tasks.named('shadowJar') {
     archiveBaseName.set('Black') // Nome personalizado
     archiveVersion.set('1.33') // Versão opcional
+    relocate 'com.google.common', 'meuplugin.libs.guava' // Evita conflitos com outras dependências
+}
+tasks.named('jar') {
+    enabled = false // Desabilita o jar padrão
 }
 
 

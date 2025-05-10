@@ -53,6 +53,10 @@ public class MeuPlugin extends JavaPlugin {
             return; // Finaliza a inicialização se o plugin estiver desativado
         }
 
+        // Registrar eventos
+        getServer().getPluginManager().registerEvents(new DeathListener(), this);
+        getServer().getPluginManager().registerEvents(new HeadInteractListener(), this);
+
         // Carregar idioma
         String language = loadLanguage();
         getLogger().info("Idioma configurado: " + language);
