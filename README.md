@@ -36,4 +36,6 @@ graph TD;
 
 Compiler file app\build\libs\Black-1.33.jar
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H411P12P)
+
 
